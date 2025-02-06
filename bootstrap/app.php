@@ -15,6 +15,9 @@ $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
+
+// Tambahkan baris ini agar Laravel membaca file .env
+$app->loadEnvironmentFrom('.env');
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces
