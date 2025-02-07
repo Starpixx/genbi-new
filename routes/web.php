@@ -96,3 +96,44 @@ Route::prefix('download')->name('download.')->group(function () {
     Route::put('/{file}', [DownloadController::class, 'update'])->name('update'); // Update file download
     Route::delete('/{file}', [DownloadController::class, 'destroy'])->name('destroy'); // Hapus file download
 });
+
+
+
+// Halaman admin
+Route::prefix('admin')->group(function () {
+    Route::get('/', function () {
+        return view('admin.dashboard.index');
+    });
+
+    Route::get('/kegiatan', function () {
+        return view('admin.kegiatan.index');
+    });
+
+    Route::get('/tentang_bi', function () {
+        return view('admin.tentang_bi.index');
+    });
+
+    Route::get('/persyaratan', function () {
+        return view('admin.persyaratan.index');
+    });
+
+    Route::get('/pengumuman', function () {
+        return view('admin.pengumuman.index');
+    });
+
+    Route::get('/genbi_point', function () {
+        return view('admin.genbi_point.index');
+    });
+
+    Route::get('/tentang_genbi', function () {
+        return view('admin.tentang_genbi.index');
+    });
+
+    Route::get('/struktur_organisasi', function () {
+        return view('admin.struktur_organisasi.index');
+    });
+
+    Route::get('/download', function () {
+        return view('admin.download.index');
+    });
+});
