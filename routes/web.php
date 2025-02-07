@@ -137,3 +137,14 @@ Route::prefix('admin')->group(function () {
         return view('admin.download.index');
     });
 });
+
+
+// untuk login
+Route::get('/login', function () {
+    return view('auth.login');
+});
+
+// untuk register
+Route::get('/register', function () {
+    return view('auth.register');
+});
